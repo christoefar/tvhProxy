@@ -1,6 +1,5 @@
 from gevent import monkey; monkey.patch_all()
 
-import sched
 import time
 import os
 import requests
@@ -18,7 +17,6 @@ logging.basicConfig(level=logging.INFO)
 load_dotenv(verbose=True)
 
 app = Flask(__name__)
-scheduler = sched.scheduler()
 logger = logging.getLogger()
 
 host_name = socket.gethostname()
